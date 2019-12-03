@@ -7,12 +7,11 @@ Consider some function~$f$:
 
 \begin{figure}[ht]
 \begin{tikzpicture}
-\begin{axis}[grid=both,
-          xmax=5,ymax=10,
+\begin{axis}[xmax=5,ymax=10,
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
-\addplot[domain=-5:5,samples=100]  {log2(x+.25)};
+\addplot[domain=-5:5,samples=100]{pow(2,-10*x^2)+x^3};
 \end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -26,7 +25,7 @@ Take it's infinitely small fragment (in our example, an infinitely small interva
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
-\addplot[domain=-0.1:0.1,samples=100]  {log2(x+.25)};
+\addplot[domain=-0.2:0.2,samples=100]{pow(2,-10*x^2)+x^3};
 \end{axis}
 \end{tikzpicture}
 \end{figure}
