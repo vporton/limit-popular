@@ -9,7 +9,8 @@ In this informal article I will explain popularly my concept of generalized limi
 For an example, consider some real function~$f$ from $x$-axis to $y$-axis:
 \begin{figure}[H]
 \begin{tikzpicture}
-\begin{axis}[xmax=5,ymax=10,
+\begin{axis}[grid=both,
+          xmax=2,ymax=7,
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
@@ -22,7 +23,7 @@ Take it's infinitely small fragment (in our example, an infinitely small interva
 \begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[grid=both,
-          xmax=5,ymax=10,
+          xmax=2,ymax=7,
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
@@ -35,7 +36,7 @@ Next consider that with a value~$y$ replaced with an infinitely small interval l
 \begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[grid=both,
-          xmax=5,ymax=10,
+          xmax=2,ymax=7,
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
@@ -49,7 +50,7 @@ Now we have ``an infinitely thin and short strip''. In fact, it is the same as a
 \begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[grid=both,
-          xmax=5,ymax=10,
+          xmax=2,ymax=7,
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
@@ -65,7 +66,7 @@ If we consider the set of all rectangles we obtain by shifting this rectangle by
 \begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[grid=both,
-          xmax=5,ymax=10,
+          xmax=2,ymax=7,
           axis lines=middle,
           restrict y to domain=-7:7,
           enlargelimits]
@@ -92,6 +93,8 @@ So we have a formula for \emph{generalized limit}:
 where~$G$ is the group of all horizontal shifts of our space~$\mathbb{R}$, $f|_{\Delta(a)}$ is the function~$f$ of which we are taking limit restricted to the infinitely small interval~$\Delta(a)$ around the point~$a$, $\nu\circ{}$~is ``stretching'' our function graph into the infinitely thin ``strip'' by applying a topological operation to it.
 
 What all this (especially ``infinitely small'') means? Read my books ??.
+
+Why we consider all shifts of our infinitely small rectangle? To make the limit not dependent of the point~$a$ to which $x$~tends. Otherwise the limit would depend on the point~$a$.
 
 Note that for discontinuous functions elements of our set (our limit is a set) won't be infinitely small ``rectangles'' (as on the pictures), but would ``touch'' more than just one~$y$ value.
 
